@@ -10,10 +10,33 @@
     <header> Personal Weather Dashboard</header>
 
     <div class="container" id="city-inputs">
-      <label for="city-name">enter cities name:</label>
-      <input type="text" id='city-name'> 
+      <label for="city-name">Enter cities name:</label>
+      <input type="input" id='city-name'> 
       <input type="submit" value="Submit" id='city-name-submit'>
+      <p id="recent-search"></p>
     </div>
+
+    <div class="todays-forcast">
+      <p id="forcast-name"></p>
+      <p id="wind"></p>
+      <p id="humidity"></p>
+      <p id="temp"></p>
+      <p id="tempF"></p>
+    </div>
+
+    <div class="uv index"></div>
+
+    <div class="five-day-forcast">
+      <button type="button" id="five-day-forcast-btn">View 5 day forcast!</button>
+      <p id="5-day-name"></p>
+      <p id="0-temp"></p>
+      <p id="1-temp"></p>
+      <p id="2-temp"></p>
+      <p id="3-temp"></p>
+      <p id="4-temp"></p>
+      <p id="5-temp"></p>
+    </div>
+    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="script.js"></script>
