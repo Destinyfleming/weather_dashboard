@@ -30,10 +30,10 @@ $( "#city-name-submit" ).click(function() {
 });
 
 //5 day forcast
-var fiveUrl = 'https://api.openweathermap.org/data/2.5/forecast?q='+ cityName +'&appid=' +APIKey
+
 
 $( "#five-day-forcast-btn" ).click(function() {
-  var cityT = $("#city-name").val()
+  var cityT = (localStorage.getItem("recent search"))
   console.log(cityT)
   var fiveUrl = 'https://api.openweathermap.org/data/2.5/forecast?q='+ cityT +'&appid=' +APIKey
 
