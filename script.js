@@ -1,15 +1,11 @@
 var APIKey = '849f687dae346078055aab12dfeb85c3'
-var cityName = 'Portland,Oregon'
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="
-+ cityName +"&appid=" + APIKey;
-var city = $("#city-name").val().trim;
-console.log(city)
 
 //create an on click function for todays forcast
 $( "#city-name-submit" ).click(function() {
-  var city = $("#city-name").val().trim;
+  var city = $("#city-name").val()
   console.log(city)
-
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="
+  + city +"&appid=" + APIKey;
     $.ajax({
       url: queryURL,
       method: "GET"
@@ -26,18 +22,21 @@ $( "#city-name-submit" ).click(function() {
         $("#temp").text("Temperature (K) " + response.main.temp);
         $("#tempF").text("Temperature (F) " + tempF.toFixed(2));
 
+
        localStorage.setItem("recent search", response.name);
        console.log(localStorage.getItem("recent search"))
        $("#recent-search").text("You have recently looked for:" + (localStorage.getItem("recent search")));
     })
 });
 
-
-
 //5 day forcast
 var fiveUrl = 'https://api.openweathermap.org/data/2.5/forecast?q='+ cityName +'&appid=' +APIKey
 
 $( "#five-day-forcast-btn" ).click(function() {
+  var cityT = $("#city-name").val()
+  console.log(cityT)
+  var fiveUrl = 'https://api.openweathermap.org/data/2.5/forecast?q='+ cityT +'&appid=' +APIKey
+
   $.ajax({
     url: fiveUrl,
     method: "GET"
@@ -62,6 +61,6 @@ $( "#five-day-forcast-btn" ).click(function() {
       $('#5-temp').text("the tempature 5 days from now is: " + tempF5.toFixed(2) + " and " + res.list[5].weather[0].description)
     })
 });
-//uv index
+
 
 

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
     <title>Weather Dashboard</title>
 </head>
@@ -10,9 +11,11 @@
     <header> Personal Weather Dashboard</header>
 
     <div class="container" id="city-inputs">
+      <img id="sun-img"src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK665tZ9vmc1BkjD6MHVaWpkpFlwN6OejopA&usqp=CAU">
+      <br>
       <label for="city-name">Enter cities name:</label>
       <input type="input" id='city-name'> 
-      <input type="submit" value="Submit" id='city-name-submit'>
+      <input type="submit" value="Submit" class="btn"id='city-name-submit'>
       <p id="recent-search"></p>
     </div>
 
@@ -26,8 +29,8 @@
 
     <div class="uv index"></div>
 
-    <div class="five-day-forcast">
-      <button type="button" id="five-day-forcast-btn">View 5 day forcast!</button>
+    <div class="container"class="five-day-forcast">
+      <button type="submit" class="btn"id="five-day-forcast-btn">View 5 day forcast!</button>
       <p id="5-day-name"></p>
       <p id="0-temp"></p>
       <p id="1-temp"></p>

@@ -1,23 +1,43 @@
 *{
-    background-color: lightgoldenrodyellow;
-    font-family: cursive;
+    background-color: white;
+    font-family: garamond,serif;
     font-size: medium;
-
+    color: grey;
 }
 
 header {
-    font-size: larger;
+    font-size: 50px;
+    color: rgb(183, 184, 255);
+    text-align: center;
+    font-weight: bold;
 }
 
-#city-inputs{
-    padding: 70px;
-
+#sun-img{
+    border: 2px solid rgba(245, 231, 36, 0.932);	
+  border-radius: 4px;						
+  height: auto;	
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
-
 .todays-forcast{
   padding: auto;
+  text-align: center;
 }
-#forcast-name , #5-day-name{
+.btn{
+    background-color: rgb(183, 184, 255)
+}
+.five-day-forcast{
+  padding: auto;
+  text-align: center;
+}
+#forcast-name {
     font-weight: bold;
-    font-size: large;
+}
+#5-day-name{
+    font-weight: bold;
+}
+#city-name{
+    text-align:center
 }
